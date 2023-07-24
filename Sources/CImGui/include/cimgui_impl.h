@@ -21,7 +21,7 @@ CIMGUI_API void ImGui_ImplGlfw_CharCallback(GLFWwindow* window,unsigned int c);
 CIMGUI_API void ImGui_ImplGlfw_MonitorCallback(GLFWmonitor* monitor,int event);
 
 #endif
-#ifdef CIMGUI_USE_OPENGL3
+
 CIMGUI_API bool ImGui_ImplOpenGL3_Init(const char* glsl_version);
 CIMGUI_API void ImGui_ImplOpenGL3_Shutdown(void);
 CIMGUI_API void ImGui_ImplOpenGL3_NewFrame(void);
@@ -31,7 +31,7 @@ CIMGUI_API void ImGui_ImplOpenGL3_DestroyFontsTexture(void);
 CIMGUI_API bool ImGui_ImplOpenGL3_CreateDeviceObjects(void);
 CIMGUI_API void ImGui_ImplOpenGL3_DestroyDeviceObjects(void);
 
-#endif
+
 #ifdef CIMGUI_USE_OPENGL2
 CIMGUI_API bool ImGui_ImplOpenGL2_Init(void);
 CIMGUI_API void ImGui_ImplOpenGL2_Shutdown(void);
@@ -43,7 +43,7 @@ CIMGUI_API bool ImGui_ImplOpenGL2_CreateDeviceObjects(void);
 CIMGUI_API void ImGui_ImplOpenGL2_DestroyDeviceObjects(void);
 
 #endif
-#ifdef CIMGUI_USE_SDL2
+
 
 typedef struct SDL_Window SDL_Window;
 typedef struct SDL_Renderer SDL_Renderer;
@@ -58,4 +58,3 @@ CIMGUI_API void ImGui_ImplSDL2_Shutdown(void);
 CIMGUI_API void ImGui_ImplSDL2_NewFrame(void);
 CIMGUI_API bool ImGui_ImplSDL2_ProcessEvent(const SDL_Event* event);
 
-#endif
