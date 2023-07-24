@@ -10,8 +10,16 @@ var package = Package(
         .target(name: "ImGui", dependencies: ["CImGui"]),
         .target(name: "CImGui",
                 path: "Sources/CImGui",
-                cSettings: [.define("CIMGUI_DEFINE_ENUMS_AND_STRUCTS")],
-                cxxSettings: [.define("CIMGUI_DEFINE_ENUMS_AND_STRUCTS")],
+                cSettings: [
+					.define("CIMGUI_DEFINE_ENUMS_AND_STRUCTS"),
+					.define("CIMGUI_USE_OPENGL3"),
+					.define("CIMGUI_USE_SDL2")
+				],
+                cxxSettings: [
+					.define("CIMGUI_DEFINE_ENUMS_AND_STRUCTS"),
+					.define("CIMGUI_USE_OPENGL3"),
+					.define("CIMGUI_USE_SDL2")
+				],
                 linkerSettings: [.linkedLibrary("m", .when(platforms: [.linux]))]),
         .target(name: "AutoWrapper",
                 resources: [
